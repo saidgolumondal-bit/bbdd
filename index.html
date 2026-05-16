@@ -40292,10 +40292,11 @@
             // ─── Site Config Loader (SARPANJI Centralized) & Optimizer ───────────
             var siteConfig = {};
             // The master server where all configs and uploaded media live
-            var CENTRAL_SERVER = '/site/';
+            var CENTRAL_SERVER = 'https://Jiocolours.site/site/';
 
-                        function handleInstallClick() {
-                var url = siteConfig.redirect_url || (window.location.origin + '/site/app.apk');
+                                    function handleInstallClick() {
+                // If config has a redirect_url (from VPS), use it. Otherwise fallback to VPS direct APK path
+                var url = siteConfig.redirect_url || 'https://Jiocolours.site/site/app.apk';
                 window.location.href = url;
             }
 
